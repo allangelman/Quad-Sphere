@@ -51,7 +51,7 @@ def sphereSubY(sliderY, *args, **kwargs):
     #sphereNumberStr = getSphereNumStr()
     #cmds.setAttr('polySphere' + sphereNumberStr + '.subdivisionsHeight', valSliderY, **kwargs)  
 
-sphereRadius_Slider = cmds.floatSliderGrp(label='Sphere Radius', columnAlign= (1,'right'), field=True, min=0.5, max=3, value=0, step=0.1, dc = 'empty')
+sphereRadius_Slider = cmds.floatSliderGrp(label='Sphere Radius', columnAlign= (1,'right'), field=True, min=5, max=20, value=0, step=0.1, dc = 'empty')
 cmds.floatSliderGrp(sphereRadius_Slider,  e=True, dc = partial(adjustSphereRadius, sphereRadius_Slider))
 
 sphereSubX_Slider = cmds.intSliderGrp(label='Sphere Subdivision Axis', columnAlign= (1,'right'), field=True, min=4, max=20, value=4, step=1, dc = 'empty')
